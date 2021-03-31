@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="club.codeqi.project.Mapper.UserMapper">
+    <!-- 增【G】 -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="uid">
+		insert into
+		user (username,password,phone,role_id)
+		values (#{username},#{password},#{phone},#{role_id})
+	</insert>
+
+    <!-- 删 -->
+    <delete id="delete">
+		delete from user where id = #{id}
+	</delete>
+
+    <!-- 改【G】 -->
+    <update id="update">
+		update user set
+		username = #{username},
+		password = #{password},
+		phone = #{phone},
+		role_id = #{role_id}
+		where id = #{id}
+	</update>
+
+
+    <!-- ================================== 查询相关 ================================== -->
+    <!-- select id, uid, mouth, basic, postion, merit, fare, total_wages, personal_leave, late, social_security, accumulation_fund, other, total_deduct, net_payment from payrolls  -->
+
+    <!-- 通用映射：自动模式 -->
+    <resultMap id="usermodel" autoMapping="true" type="club.codeqi.project.pojo.User"></resultMap>
+
+    <!-- 通用映射：手动模式 -->
+    <resultMap id="user_Map" type="club.codeqi.project.pojo.User">
+        <id property="id" column="uid"></id>
+        <result property="username" column="username"></result>
+        <result property="password" column="password"></result>
+        <result property="phone" column="phone"></result>
+        <result property="roleId" column="role_id"></result>
+        <association property="role" javaType="club.codeqi.project.pojo.Role">
+            <id property="id" column="rid" />
+            <result property="roleName" column="role_name"/>
+            <result property="roleInfo" column="role_info"/>
+        </association>
+        <collection property="permissions" ofType="club.codeqi.project.pojo.Permission">
+            <id property="id" column="perid"></id>
+            <result property="permissionCode" column="permission_code"></result>
+            <result property="permissionInfo" column="permission_info"></result>
+        </collection>
+    </resultMap>
+
+    <!-- 公共查询用户权限sql片段 -->
+    <sql id="userpermiss_sql">
+		SELECT
+			u.id uid,u.username,u.password,u.phone,u.role_id, r.id rid, r.role_name, r.role_info, p.id perid, p.permission_code, p.permission_info
+		FROM
+			USER u
+		LEFT JOIN role r ON u.role_id = r.id
+		LEFT JOIN permission p ON u.role_id = p.rid
+	</sql>
+
+
+    <!-- 查 -->
+    <select id="selectByid" resultMap="user_Map">
+        <include refid="userpermiss_sql"></include>
+        where u.uid = #{uid}
+    </select>
+
+    <!-- 查询，根据条件(参数为null或0时默认忽略此条件)【G】 -->
+    <select id="selectAll" resultMap="user_Map">
+        <include refid="userpermiss_sql"></include>
+    </select>
+
+    <!-- 查询，根据用户名【G】 -->
+    <select id="findByName" resultMap="user_Map">
+        <include refid="userpermiss_sql"></include>
+        <where>
+            username = #{username}
+        </where>
+    </select>
+
+
+
+    <!-- 查询携带用户角色信息 -->
+    <select id="select_roleAll" resultMap="user_Map">
+        <include refid="userpermiss_sql"></include>
+        group by u.id
+    </select>
+</mapper>

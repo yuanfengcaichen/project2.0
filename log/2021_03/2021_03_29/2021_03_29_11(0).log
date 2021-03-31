@@ -1,0 +1,542 @@
+2021-03-29 11:02:40.619 INFO  [main] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 9536 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 11:02:40.624 INFO  [main] --> : No active profile set, falling back to default profiles: default
+2021-03-29 11:02:42.946 INFO  [main] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 11:02:42.971 INFO  [main] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 11:02:42.972 INFO  [main] --> : Starting service [Tomcat]
+2021-03-29 11:02:42.973 INFO  [main] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 11:02:43.197 INFO  [main] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 11:02:43.198 INFO  [main] --> : Root WebApplicationContext: initialization completed in 2472 ms
+2021-03-29 11:02:43.472 INFO  [main] --> : Init DruidDataSource
+2021-03-29 11:02:43.901 INFO  [main] --> : {dataSource-1} inited
+2021-03-29 11:02:45.879 INFO  [main] --> : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79be91eb, org.springframework.security.web.context.SecurityContextPersistenceFilter@5f5297e3, org.springframework.security.web.header.HeaderWriterFilter@7ea71fc2, org.springframework.web.filter.CorsFilter@7abeabe9, org.springframework.security.web.authentication.logout.LogoutFilter@55d8c2c4, club.codeqi.project.Filter.JwtLoginFilter@626c569b, club.codeqi.project.Filter.JwtVerfyFilter@684ce74c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ec3a8bd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71166348, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65593327, org.springframework.security.web.session.SessionManagementFilter@7cd5fcf4, org.springframework.security.web.access.ExceptionTranslationFilter@73e1ecd0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@74697863]
+2021-03-29 11:02:46.160 INFO  [main] --> : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-29 11:02:46.729 INFO  [main] --> : Starting ProtocolHandler ["http-nio-8081"]
+2021-03-29 11:02:46.767 INFO  [main] --> : Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-29 11:02:46.799 INFO  [main] --> : Started ProjectApplication in 7.145 seconds (JVM running for 8.84)
+2021-03-29 11:02:55.852 INFO  [http-nio-8081-exec-2] --> : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-29 11:02:55.853 INFO  [http-nio-8081-exec-2] --> : Initializing Servlet 'dispatcherServlet'
+2021-03-29 11:02:55.856 INFO  [http-nio-8081-exec-2] --> : Completed initialization in 2 ms
+2021-03-29 11:02:56.084 ERROR [http-nio-8081-exec-2] --> : json解析出错：{"id":12,"username":"叶晨义","password":"","phone":"1234365","roleId":2,"role":{"id":2,"roleName":"user","roleInfo":"user","createTime":null,"permissions":null},"permissions":[{"id":4,"rid":null,"permissionCode":"insert","permissionInfo":"添加项目","createTime":null,"authority":"insert"},{"id":5,"rid":null,"permissionCode":"select","permissionInfo":"根据用户名查询","createTime":null,"authority":"select"}],"enabled":true}
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "authority" (class club.codeqi.project.pojo.Permission), not marked as ignorable (5 known properties: "createTime", "id", "permissionCode", "rid", "permissionInfo"])
+ at [Source: (String)"{"id":12,"username":"叶晨义","password":"","phone":"1234365","roleId":2,"role":{"id":2,"roleName":"user","roleInfo":"user","createTime":null,"permissions":null},"permissions":[{"id":4,"rid":null,"permissionCode":"insert","permissionInfo":"添加项目","createTime":null,"authority":"insert"},{"id":5,"rid":null,"permissionCode":"select","permissionInfo":"根据用户名查询","createTime":null,"authority":"select"}],"enabled":true}"; line: 1, column: 274] (through reference chain: club.codeqi.project.pojo.User["permissions"]->java.util.ArrayList[0]->club.codeqi.project.pojo.Permission["authority"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:855)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1212)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1604)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1582)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:299)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:156)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:290)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:249)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:26)
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:293)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:156)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4526)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3468)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3436)
+	at club.codeqi.project.Common.utils.JsonUtils.toBean(JsonUtils.java:39)
+	at club.codeqi.project.Common.utils.JwtUtils.getInfoFromToken(JwtUtils.java:84)
+	at club.codeqi.project.Filter.JwtVerfyFilter.doFilterInternal(JwtVerfyFilter.java:52)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-03-29 11:04:37.475 INFO  [main] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 17660 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 11:04:37.480 INFO  [main] --> : No active profile set, falling back to default profiles: default
+2021-03-29 11:04:39.969 INFO  [main] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 11:04:39.996 INFO  [main] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 11:04:39.997 INFO  [main] --> : Starting service [Tomcat]
+2021-03-29 11:04:39.998 INFO  [main] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 11:04:40.241 INFO  [main] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 11:04:40.241 INFO  [main] --> : Root WebApplicationContext: initialization completed in 2658 ms
+2021-03-29 11:04:40.490 INFO  [main] --> : Init DruidDataSource
+2021-03-29 11:04:40.909 INFO  [main] --> : {dataSource-1} inited
+2021-03-29 11:04:42.892 INFO  [main] --> : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79e10fb4, org.springframework.security.web.context.SecurityContextPersistenceFilter@56cfe6be, org.springframework.security.web.header.HeaderWriterFilter@56a05324, org.springframework.web.filter.CorsFilter@4a50c746, org.springframework.security.web.authentication.logout.LogoutFilter@72af90e8, club.codeqi.project.Filter.JwtLoginFilter@70fede7d, club.codeqi.project.Filter.JwtVerfyFilter@36510e73, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@149aa7b2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@11eec06b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c47a053, org.springframework.security.web.session.SessionManagementFilter@342beaf6, org.springframework.security.web.access.ExceptionTranslationFilter@774d8276, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7c71c889]
+2021-03-29 11:04:43.145 INFO  [main] --> : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-29 11:04:43.683 INFO  [main] --> : Starting ProtocolHandler ["http-nio-8081"]
+2021-03-29 11:04:43.705 INFO  [main] --> : Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-29 11:04:43.718 INFO  [main] --> : Started ProjectApplication in 7.057 seconds (JVM running for 8.722)
+2021-03-29 11:04:47.920 INFO  [http-nio-8081-exec-1] --> : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-29 11:04:47.921 INFO  [http-nio-8081-exec-1] --> : Initializing Servlet 'dispatcherServlet'
+2021-03-29 11:04:47.925 INFO  [http-nio-8081-exec-1] --> : Completed initialization in 3 ms
+2021-03-29 11:04:48.157 ERROR [http-nio-8081-exec-1] --> : json解析出错：{"id":12,"username":"叶晨义","password":"","phone":"1234365","roleId":2,"role":{"id":2,"roleName":"user","roleInfo":"user","createTime":null,"permissions":null},"permissions":[{"id":4,"rid":null,"permissionCode":"insert","permissionInfo":"添加项目","createTime":null,"authority":"insert"},{"id":5,"rid":null,"permissionCode":"select","permissionInfo":"根据用户名查询","createTime":null,"authority":"select"}],"enabled":true}
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "authority" (class club.codeqi.project.pojo.Permission), not marked as ignorable (5 known properties: "createTime", "id", "permissionCode", "rid", "permissionInfo"])
+ at [Source: (String)"{"id":12,"username":"叶晨义","password":"","phone":"1234365","roleId":2,"role":{"id":2,"roleName":"user","roleInfo":"user","createTime":null,"permissions":null},"permissions":[{"id":4,"rid":null,"permissionCode":"insert","permissionInfo":"添加项目","createTime":null,"authority":"insert"},{"id":5,"rid":null,"permissionCode":"select","permissionInfo":"根据用户名查询","createTime":null,"authority":"select"}],"enabled":true}"; line: 1, column: 274] (through reference chain: club.codeqi.project.pojo.User["permissions"]->java.util.ArrayList[0]->club.codeqi.project.pojo.Permission["authority"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:855)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1212)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1604)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1582)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:299)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:156)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:290)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:249)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:26)
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:293)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:156)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4526)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3468)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3436)
+	at club.codeqi.project.Common.utils.JsonUtils.toBean(JsonUtils.java:40)
+	at club.codeqi.project.Common.utils.JwtUtils.getInfoFromToken(JwtUtils.java:84)
+	at club.codeqi.project.Filter.JwtVerfyFilter.doFilterInternal(JwtVerfyFilter.java:52)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-03-29 11:08:34.401 INFO  [main] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 15996 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 11:08:34.406 INFO  [main] --> : No active profile set, falling back to default profiles: default
+2021-03-29 11:08:36.830 INFO  [main] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 11:08:36.855 INFO  [main] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 11:08:36.856 INFO  [main] --> : Starting service [Tomcat]
+2021-03-29 11:08:36.857 INFO  [main] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 11:08:37.151 INFO  [main] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 11:08:37.151 INFO  [main] --> : Root WebApplicationContext: initialization completed in 2656 ms
+2021-03-29 11:08:37.382 INFO  [main] --> : Init DruidDataSource
+2021-03-29 11:08:37.719 INFO  [main] --> : {dataSource-1} inited
+2021-03-29 11:08:39.687 INFO  [main] --> : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36510e73, org.springframework.security.web.context.SecurityContextPersistenceFilter@4e958f08, org.springframework.security.web.header.HeaderWriterFilter@2a99ca99, org.springframework.web.filter.CorsFilter@39832280, org.springframework.security.web.authentication.logout.LogoutFilter@7faa0680, club.codeqi.project.Filter.JwtLoginFilter@2c47a053, club.codeqi.project.Filter.JwtVerfyFilter@5d2a86c0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3bbb8c16, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d22d3b1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ba1b62e, org.springframework.security.web.session.SessionManagementFilter@781654f8, org.springframework.security.web.access.ExceptionTranslationFilter@4faf1f4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c59a0f7]
+2021-03-29 11:08:39.989 INFO  [main] --> : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-29 11:08:40.622 INFO  [main] --> : Starting ProtocolHandler ["http-nio-8081"]
+2021-03-29 11:08:40.664 INFO  [main] --> : Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-29 11:08:40.691 INFO  [main] --> : Started ProjectApplication in 7.3 seconds (JVM running for 9.261)
+2021-03-29 11:08:40.958 INFO  [http-nio-8081-exec-1] --> : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-29 11:08:40.959 INFO  [http-nio-8081-exec-1] --> : Initializing Servlet 'dispatcherServlet'
+2021-03-29 11:08:40.962 INFO  [http-nio-8081-exec-1] --> : Completed initialization in 2 ms
+2021-03-29 11:15:36.818 INFO  [restartedMain] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 16956 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 11:15:36.822 INFO  [restartedMain] --> : No active profile set, falling back to default profiles: default
+2021-03-29 11:15:36.899 INFO  [restartedMain] --> : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-29 11:15:36.903 INFO  [restartedMain] --> : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-29 11:15:39.254 INFO  [restartedMain] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 11:15:39.275 INFO  [restartedMain] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 11:15:39.276 INFO  [restartedMain] --> : Starting service [Tomcat]
+2021-03-29 11:15:39.277 INFO  [restartedMain] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 11:15:39.463 INFO  [restartedMain] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 11:15:39.463 INFO  [restartedMain] --> : Root WebApplicationContext: initialization completed in 2559 ms
+2021-03-29 11:15:39.745 INFO  [restartedMain] --> : Init DruidDataSource
+2021-03-29 11:15:40.179 INFO  [restartedMain] --> : {dataSource-1} inited
+2021-03-29 11:15:41.927 INFO  [restartedMain] --> : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c7ec3d1, org.springframework.security.web.context.SecurityContextPersistenceFilter@25f4412c, org.springframework.security.web.header.HeaderWriterFilter@515c3ad0, org.springframework.web.filter.CorsFilter@643f5f55, org.springframework.security.web.authentication.logout.LogoutFilter@4803a63a, club.codeqi.project.Filter.JwtLoginFilter@269348c, club.codeqi.project.Filter.JwtVerfyFilter@7ab9cd0b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ea8dff2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1746cd79, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@174dfea4, org.springframework.security.web.session.SessionManagementFilter@5d7d5bed, org.springframework.security.web.access.ExceptionTranslationFilter@71b5f9eb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26379dd9]
+2021-03-29 11:15:42.178 INFO  [restartedMain] --> : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-29 11:15:42.726 INFO  [restartedMain] --> : LiveReload server is running on port 35729
+2021-03-29 11:15:42.808 INFO  [restartedMain] --> : Starting ProtocolHandler ["http-nio-8081"]
+2021-03-29 11:15:42.850 INFO  [restartedMain] --> : Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-29 11:15:42.882 INFO  [restartedMain] --> : Started ProjectApplication in 7.13 seconds (JVM running for 9.174)
+2021-03-29 11:15:48.119 INFO  [http-nio-8081-exec-1] --> : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-29 11:15:48.120 INFO  [http-nio-8081-exec-1] --> : Initializing Servlet 'dispatcherServlet'
+2021-03-29 11:15:48.123 INFO  [http-nio-8081-exec-1] --> : Completed initialization in 3 ms
+2021-03-29 11:18:23.016 INFO  [restartedMain] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 20204 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 11:18:23.021 INFO  [restartedMain] --> : No active profile set, falling back to default profiles: default
+2021-03-29 11:18:23.095 INFO  [restartedMain] --> : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-29 11:18:23.099 INFO  [restartedMain] --> : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-29 11:18:25.679 INFO  [restartedMain] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 11:18:25.701 INFO  [restartedMain] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 11:18:25.702 INFO  [restartedMain] --> : Starting service [Tomcat]
+2021-03-29 11:18:25.702 INFO  [restartedMain] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 11:18:25.954 INFO  [restartedMain] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 11:18:25.954 INFO  [restartedMain] --> : Root WebApplicationContext: initialization completed in 2853 ms
+2021-03-29 11:18:26.216 INFO  [restartedMain] --> : Init DruidDataSource
+2021-03-29 11:18:26.623 INFO  [restartedMain] --> : {dataSource-1} inited
+2021-03-29 11:18:28.471 INFO  [restartedMain] --> : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@68448406, org.springframework.security.web.context.SecurityContextPersistenceFilter@41824c5f, org.springframework.security.web.header.HeaderWriterFilter@2991d791, org.springframework.web.filter.CorsFilter@4bc5d08, org.springframework.security.web.authentication.logout.LogoutFilter@3c7b8cf9, club.codeqi.project.Filter.JwtLoginFilter@22427d83, club.codeqi.project.Filter.JwtVerfyFilter@2101abee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@275cbdef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f9d1087, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7988efb9, org.springframework.security.web.session.SessionManagementFilter@7e5941e0, org.springframework.security.web.access.ExceptionTranslationFilter@3ea6ab78, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@bc46615]
+2021-03-29 11:18:28.744 INFO  [restartedMain] --> : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-29 11:18:29.315 INFO  [restartedMain] --> : LiveReload server is running on port 35729
+2021-03-29 11:18:29.402 INFO  [restartedMain] --> : Starting ProtocolHandler ["http-nio-8081"]
+2021-03-29 11:18:29.442 INFO  [restartedMain] --> : Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-29 11:18:29.473 INFO  [restartedMain] --> : Started ProjectApplication in 7.354 seconds (JVM running for 9.484)
+2021-03-29 11:59:39.197 INFO  [Thread-5] --> : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-29 11:59:39.201 INFO  [Thread-5] --> : {dataSource-1} closed
+2021-03-29 11:59:39.438 INFO  [restartedMain] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 20204 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 11:59:39.438 DEBUG [restartedMain] --> : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-29 11:59:39.439 INFO  [restartedMain] --> : No active profile set, falling back to default profiles: default
+2021-03-29 11:59:40.745 INFO  [restartedMain] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 11:59:40.747 INFO  [restartedMain] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 11:59:40.747 INFO  [restartedMain] --> : Starting service [Tomcat]
+2021-03-29 11:59:40.748 INFO  [restartedMain] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 11:59:40.790 INFO  [restartedMain] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 11:59:40.790 INFO  [restartedMain] --> : Root WebApplicationContext: initialization completed in 1343 ms
+2021-03-29 11:59:40.878 ERROR [restartedMain] --> : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webSecurityConfig': Unsatisfied dependency expressed through field 'userservice'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl' defined in file [D:\亚龙展旗\项目2021\项目管理\project\target\classes\club\codeqi\project\Service\Impl\UserServiceImpl.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [club.codeqi.project.Service.Impl.UserServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7af75d9f]
+2021-03-29 11:59:40.881 INFO  [restartedMain] --> : Stopping service [Tomcat]
+2021-03-29 11:59:40.894 WARN  [restartedMain] --> : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-03-29 11:59:40.904 INFO  [restartedMain] --> : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-03-29 11:59:40.968 ERROR [restartedMain] --> : Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:576)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at club.codeqi.project.ProjectApplication.main(ProjectApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webSecurityConfig': Unsatisfied dependency expressed through field 'userservice'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl' defined in file [D:\亚龙展旗\项目2021\项目管理\project\target\classes\club\codeqi\project\Service\Impl\UserServiceImpl.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [club.codeqi.project.Service.Impl.UserServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7af75d9f]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:175)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:170)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:155)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:259)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:233)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5166)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl' defined in file [D:\亚龙展旗\项目2021\项目管理\project\target\classes\club\codeqi\project\Service\Impl\UserServiceImpl.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [club.codeqi.project.Service.Impl.UserServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7af75d9f]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 70 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [club.codeqi.project.Service.Impl.UserServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7af75d9f]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:737)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:669)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:366)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:347)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1098)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	... 79 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Lclub/codeqi/project/Mapper/UserMapper;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3061)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2248)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:732)
+	... 85 common frames omitted
+Caused by: java.lang.ClassNotFoundException: club.codeqi.project.Mapper.UserMapper
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 89 common frames omitted
+2021-03-29 11:59:42.546 INFO  [restartedMain] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 20204 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 11:59:42.547 DEBUG [restartedMain] --> : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-29 11:59:42.547 INFO  [restartedMain] --> : No active profile set, falling back to default profiles: default
+2021-03-29 11:59:43.371 INFO  [restartedMain] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 11:59:43.372 INFO  [restartedMain] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 11:59:43.372 INFO  [restartedMain] --> : Starting service [Tomcat]
+2021-03-29 11:59:43.373 INFO  [restartedMain] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 11:59:43.408 INFO  [restartedMain] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 11:59:43.409 INFO  [restartedMain] --> : Root WebApplicationContext: initialization completed in 858 ms
+2021-03-29 11:59:43.493 ERROR [restartedMain] --> : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webSecurityConfig': Unsatisfied dependency expressed through field 'userservice'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl' defined in file [D:\亚龙展旗\项目2021\项目管理\project\target\classes\club\codeqi\project\Service\Impl\UserServiceImpl.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [club.codeqi.project.Service.Impl.UserServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4ed0eb85]
+2021-03-29 11:59:43.496 INFO  [restartedMain] --> : Stopping service [Tomcat]
+2021-03-29 11:59:43.498 WARN  [restartedMain] --> : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-03-29 11:59:43.503 INFO  [restartedMain] --> : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-03-29 11:59:43.506 ERROR [restartedMain] --> : Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:576)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at club.codeqi.project.ProjectApplication.main(ProjectApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webSecurityConfig': Unsatisfied dependency expressed through field 'userservice'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl' defined in file [D:\亚龙展旗\项目2021\项目管理\project\target\classes\club\codeqi\project\Service\Impl\UserServiceImpl.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [club.codeqi.project.Service.Impl.UserServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4ed0eb85]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:175)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:170)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:155)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:259)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:233)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5166)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl' defined in file [D:\亚龙展旗\项目2021\项目管理\project\target\classes\club\codeqi\project\Service\Impl\UserServiceImpl.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [club.codeqi.project.Service.Impl.UserServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4ed0eb85]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 70 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [club.codeqi.project.Service.Impl.UserServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4ed0eb85]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:737)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:669)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:366)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:347)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1098)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	... 79 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Lclub/codeqi/project/Mapper/UserMapper;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3061)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2248)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:732)
+	... 85 common frames omitted
+Caused by: java.lang.ClassNotFoundException: club.codeqi.project.Mapper.UserMapper
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 89 common frames omitted
+2021-03-29 11:59:52.131 INFO  [restartedMain] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 20204 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 11:59:52.131 DEBUG [restartedMain] --> : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-29 11:59:52.132 INFO  [restartedMain] --> : No active profile set, falling back to default profiles: default
+2021-03-29 11:59:52.751 INFO  [restartedMain] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 11:59:52.752 INFO  [restartedMain] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 11:59:52.752 INFO  [restartedMain] --> : Starting service [Tomcat]
+2021-03-29 11:59:52.753 INFO  [restartedMain] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 11:59:52.793 INFO  [restartedMain] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 11:59:52.793 INFO  [restartedMain] --> : Root WebApplicationContext: initialization completed in 658 ms
+2021-03-29 11:59:52.882 ERROR [restartedMain] --> : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webSecurityConfig': Unsatisfied dependency expressed through field 'userservice'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'club.codeqi.project.Service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-03-29 11:59:52.885 INFO  [restartedMain] --> : Stopping service [Tomcat]
+2021-03-29 11:59:52.889 WARN  [restartedMain] --> : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-03-29 11:59:52.895 INFO  [restartedMain] --> : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-03-29 11:59:52.903 ERROR [restartedMain] --> : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userservice in club.codeqi.project.Config.WebSecurityConfig required a bean of type 'club.codeqi.project.Service.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'club.codeqi.project.Service.UserService' in your configuration.
+

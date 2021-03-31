@@ -1,0 +1,63 @@
+2021-03-29 12:01:39.346 INFO  [restartedMain] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 20204 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 12:01:39.346 DEBUG [restartedMain] --> : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-29 12:01:39.347 INFO  [restartedMain] --> : No active profile set, falling back to default profiles: default
+2021-03-29 12:01:39.942 INFO  [restartedMain] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 12:01:39.943 INFO  [restartedMain] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 12:01:39.944 INFO  [restartedMain] --> : Starting service [Tomcat]
+2021-03-29 12:01:39.948 INFO  [restartedMain] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 12:01:39.982 INFO  [restartedMain] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 12:01:39.982 INFO  [restartedMain] --> : Root WebApplicationContext: initialization completed in 631 ms
+2021-03-29 12:01:40.091 ERROR [restartedMain] --> : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webSecurityConfig': Unsatisfied dependency expressed through field 'userservice'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'club.codeqi.project.Service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-03-29 12:01:40.094 INFO  [restartedMain] --> : Stopping service [Tomcat]
+2021-03-29 12:01:40.098 WARN  [restartedMain] --> : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-03-29 12:01:40.104 INFO  [restartedMain] --> : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-03-29 12:01:40.109 ERROR [restartedMain] --> : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userservice in club.codeqi.project.Config.WebSecurityConfig required a bean of type 'club.codeqi.project.Service.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'club.codeqi.project.Service.UserService' in your configuration.
+
+2021-03-29 12:03:13.449 INFO  [restartedMain] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 8220 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 12:03:13.454 DEBUG [restartedMain] --> : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-29 12:03:13.455 INFO  [restartedMain] --> : No active profile set, falling back to default profiles: default
+2021-03-29 12:03:13.562 INFO  [restartedMain] --> : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-29 12:03:13.563 INFO  [restartedMain] --> : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-29 12:03:15.295 INFO  [restartedMain] --> : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-29 12:03:15.303 INFO  [restartedMain] --> : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-29 12:03:15.365 INFO  [restartedMain] --> : Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+2021-03-29 12:03:16.062 INFO  [restartedMain] --> : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@567514ba' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 12:03:16.074 INFO  [restartedMain] --> : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 12:03:16.720 INFO  [restartedMain] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 12:03:16.741 INFO  [restartedMain] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 12:03:16.742 INFO  [restartedMain] --> : Starting service [Tomcat]
+2021-03-29 12:03:16.742 INFO  [restartedMain] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 12:03:16.969 INFO  [restartedMain] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 12:03:16.969 INFO  [restartedMain] --> : Root WebApplicationContext: initialization completed in 3405 ms
+2021-03-29 12:03:17.272 INFO  [restartedMain] --> : Init DruidDataSource
+2021-03-29 12:03:17.759 INFO  [restartedMain] --> : {dataSource-1} inited
+2021-03-29 12:03:20.450 INFO  [restartedMain] --> : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@84c20f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f9ca981, org.springframework.security.web.header.HeaderWriterFilter@29d7c6a8, org.springframework.web.filter.CorsFilter@6674fb84, org.springframework.security.web.authentication.logout.LogoutFilter@589555e8, club.codeqi.project.Filter.JwtLoginFilter@1dee4212, club.codeqi.project.Filter.JwtVerfyFilter@1d20647b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41018f94, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ecaad71, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35b2edc3, org.springframework.security.web.session.SessionManagementFilter@15059977, org.springframework.security.web.access.ExceptionTranslationFilter@4d0b1964, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@414f364d]
+2021-03-29 12:03:20.777 INFO  [restartedMain] --> : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-29 12:03:21.723 INFO  [restartedMain] --> : LiveReload server is running on port 35729
+2021-03-29 12:03:21.816 INFO  [restartedMain] --> : Starting ProtocolHandler ["http-nio-8081"]
+2021-03-29 12:03:21.858 INFO  [restartedMain] --> : Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-29 12:03:21.890 INFO  [restartedMain] --> : Started ProjectApplication in 9.542 seconds (JVM running for 11.807)
+2021-03-29 12:03:31.976 INFO  [http-nio-8081-exec-2] --> : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-29 12:03:31.978 INFO  [http-nio-8081-exec-2] --> : Initializing Servlet 'dispatcherServlet'
+2021-03-29 12:03:31.980 INFO  [http-nio-8081-exec-2] --> : Completed initialization in 2 ms
+2021-03-29 12:03:35.020 DEBUG [http-nio-8081-exec-2] --> : ==>  Preparing: select * from task 
+2021-03-29 12:03:35.087 DEBUG [http-nio-8081-exec-2] --> : ==> Parameters: 
+2021-03-29 12:03:35.311 DEBUG [http-nio-8081-exec-2] --> : <==      Total: 96

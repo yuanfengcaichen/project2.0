@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="club.codeqi.project.Mapper.TaskMapper">
+    <!-- 增 -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+		insert into
+		task (label,user,startTime,endTime,percent,type,parentId,collapsed,fill,stroke)
+		values (#{label},#{user},#{startTime},#{endTime},#{percent},#{type},#{parentId},#{collapsed},#{fill},#{stroke})
+	</insert>
+
+    <!-- 删 -->
+    <delete id="delete">
+		delete from task where id = #{id}
+	</delete>
+
+    <!-- 改 -->
+    <update id="update">
+		update task set
+		label = #{label},
+		user = #{user},
+		startTime = #{startTime},
+		endTime = #{endTime},
+		percent = #{percent},
+		type = #{type},
+		parentId = #{parentId},
+		collapsed = #{collapsed},
+		fill = #{fill},
+		stroke = #{stroke}
+		where id = #{id}
+	</update>
+
+    <!-- 公共查询sql片段 -->
+    <sql id="select_sql">
+		select * from task
+	</sql>
+
+    <!-- 查全部 -->
+    <select id="selectAll" resultType="club.codeqi.project.pojo.Task">
+        <include refid="select_sql"></include>
+    </select>
+
+	<!--查询全部顶级任务-->
+	<select id="selectParent" resultType="club.codeqi.project.pojo.Task">
+		<include refid="select_sql"></include>
+		where parentId is NULL
+	</select>
+
+	<!-- 查某用户的全部项目 -->
+	<select id="selectAllByUsername" resultType="club.codeqi.project.pojo.Task">
+		<include refid="select_sql"></include>
+		where user = #{user}
+	</select>
+
+	<!-- 查父id为某值的全部项目 -->
+	<select id="selectBypid" resultType="club.codeqi.project.pojo.Task">
+		<include refid="select_sql"></include>
+		where parentId = #{pid}
+	</select>
+
+    <!-- 查单个 -->
+    <select id="selectByid" resultType="club.codeqi.project.pojo.Task">
+        <include refid="select_sql"></include>
+        where id = #{id}
+    </select>
+
+</mapper>

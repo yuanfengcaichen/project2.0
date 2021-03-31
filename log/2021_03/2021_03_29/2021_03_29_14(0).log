@@ -1,0 +1,676 @@
+2021-03-29 14:10:58.436 INFO  [restartedMain] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 20788 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 14:10:58.441 DEBUG [restartedMain] --> : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-29 14:10:58.442 INFO  [restartedMain] --> : No active profile set, falling back to default profiles: default
+2021-03-29 14:10:58.534 INFO  [restartedMain] --> : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-29 14:10:58.535 INFO  [restartedMain] --> : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-29 14:11:00.041 INFO  [restartedMain] --> : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-29 14:11:00.044 INFO  [restartedMain] --> : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-29 14:11:00.098 INFO  [restartedMain] --> : Finished Spring Data repository scanning in 31 ms. Found 0 Redis repository interfaces.
+2021-03-29 14:11:00.808 INFO  [restartedMain] --> : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@623c8d63' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 14:11:00.818 INFO  [restartedMain] --> : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 14:11:01.443 INFO  [restartedMain] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 14:11:01.463 INFO  [restartedMain] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 14:11:01.464 INFO  [restartedMain] --> : Starting service [Tomcat]
+2021-03-29 14:11:01.465 INFO  [restartedMain] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 14:11:01.685 INFO  [restartedMain] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 14:11:01.685 INFO  [restartedMain] --> : Root WebApplicationContext: initialization completed in 3149 ms
+2021-03-29 14:11:02.015 INFO  [restartedMain] --> : Init DruidDataSource
+2021-03-29 14:11:02.500 INFO  [restartedMain] --> : {dataSource-1} inited
+2021-03-29 14:11:05.084 INFO  [restartedMain] --> : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e227f3d, org.springframework.security.web.context.SecurityContextPersistenceFilter@293c07d9, org.springframework.security.web.header.HeaderWriterFilter@487fc11a, org.springframework.web.filter.CorsFilter@f5f6f3f, org.springframework.security.web.authentication.logout.LogoutFilter@59b300f6, club.codeqi.project.Filter.JwtLoginFilter@404c2600, club.codeqi.project.Filter.JwtVerfyFilter@596f1e89, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3e4bf49e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2427d5a4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73077bdc, org.springframework.security.web.session.SessionManagementFilter@b740cf, org.springframework.security.web.access.ExceptionTranslationFilter@7e185ec2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@47cf275e]
+2021-03-29 14:11:05.390 INFO  [restartedMain] --> : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-29 14:11:06.353 INFO  [restartedMain] --> : LiveReload server is running on port 35729
+2021-03-29 14:11:06.444 INFO  [restartedMain] --> : Starting ProtocolHandler ["http-nio-8081"]
+2021-03-29 14:11:06.483 INFO  [restartedMain] --> : Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-29 14:11:06.513 INFO  [restartedMain] --> : Started ProjectApplication in 8.962 seconds (JVM running for 11.082)
+2021-03-29 14:11:10.878 INFO  [http-nio-8081-exec-2] --> : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-29 14:11:10.880 INFO  [http-nio-8081-exec-2] --> : Initializing Servlet 'dispatcherServlet'
+2021-03-29 14:11:10.882 INFO  [http-nio-8081-exec-2] --> : Completed initialization in 2 ms
+2021-03-29 14:12:13.094 DEBUG [http-nio-8081-exec-4] --> : ==>  Preparing: SELECT u.id uid,u.username,u.password,u.phone,u.role_id, r.id rid, r.role_name, r.role_info, p.id perid, p.permission_code, p.permission_info FROM USER u LEFT JOIN role r ON u.role_id = r.id LEFT JOIN permission p ON u.role_id = p.rid WHERE username = ? 
+2021-03-29 14:12:13.151 DEBUG [http-nio-8081-exec-4] --> : ==> Parameters: 叶晨义(String)
+2021-03-29 14:12:13.207 DEBUG [http-nio-8081-exec-4] --> : <==      Total: 2
+2021-03-29 14:13:17.034 DEBUG [http-nio-8081-exec-7] --> : ==>  Preparing: SELECT u.id uid,u.username,u.password,u.phone,u.role_id, r.id rid, r.role_name, r.role_info, p.id perid, p.permission_code, p.permission_info FROM USER u LEFT JOIN role r ON u.role_id = r.id LEFT JOIN permission p ON u.role_id = p.rid WHERE username = ? 
+2021-03-29 14:13:17.035 DEBUG [http-nio-8081-exec-7] --> : ==> Parameters: 叶晨义(String)
+2021-03-29 14:13:17.042 DEBUG [http-nio-8081-exec-7] --> : <==      Total: 2
+2021-03-29 14:13:17.239 ERROR [http-nio-8081-exec-7] --> : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.RuntimeException: org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at club.codeqi.project.Filter.JwtLoginFilter.attemptAuthentication(JwtLoginFilter.java:55)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:222)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:79)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:147)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at club.codeqi.project.Filter.JwtLoginFilter.attemptAuthentication(JwtLoginFilter.java:39)
+	... 53 common frames omitted
+2021-03-29 14:13:17.285 ERROR [http-nio-8081-exec-7] --> : Servlet.service() for servlet [dispatcherServlet] threw exception
+java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.apache.catalina.connector.Response.getOutputStream(Response.java:550)
+	at org.apache.catalina.connector.ResponseFacade.getOutputStream(ResponseFacade.java:210)
+	at javax.servlet.ServletResponseWrapper.getOutputStream(ServletResponseWrapper.java:105)
+	at org.springframework.http.server.ServletServerHttpResponse.getBody(ServletServerHttpResponse.java:97)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:420)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:277)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:124)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:710)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:578)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:514)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:392)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:257)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:352)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:177)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-03-29 14:13:17.287 ERROR [http-nio-8081-exec-7] --> : Exception Processing ErrorPage[errorCode=0, location=/error]
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:710)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:578)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:514)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:392)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:257)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:352)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:177)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.apache.catalina.connector.Response.getOutputStream(Response.java:550)
+	at org.apache.catalina.connector.ResponseFacade.getOutputStream(ResponseFacade.java:210)
+	at javax.servlet.ServletResponseWrapper.getOutputStream(ServletResponseWrapper.java:105)
+	at org.springframework.http.server.ServletServerHttpResponse.getBody(ServletServerHttpResponse.java:97)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:420)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:277)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:124)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	... 38 common frames omitted
+2021-03-29 14:13:22.283 DEBUG [http-nio-8081-exec-9] --> : ==>  Preparing: SELECT u.id uid,u.username,u.password,u.phone,u.role_id, r.id rid, r.role_name, r.role_info, p.id perid, p.permission_code, p.permission_info FROM USER u LEFT JOIN role r ON u.role_id = r.id LEFT JOIN permission p ON u.role_id = p.rid WHERE username = ? 
+2021-03-29 14:13:22.285 DEBUG [http-nio-8081-exec-9] --> : ==> Parameters: 叶晨义(String)
+2021-03-29 14:13:22.289 DEBUG [http-nio-8081-exec-9] --> : <==      Total: 2
+2021-03-29 14:13:22.471 ERROR [http-nio-8081-exec-9] --> : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.RuntimeException: org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at club.codeqi.project.Filter.JwtLoginFilter.attemptAuthentication(JwtLoginFilter.java:55)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:222)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:79)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:147)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at club.codeqi.project.Filter.JwtLoginFilter.attemptAuthentication(JwtLoginFilter.java:39)
+	... 53 common frames omitted
+2021-03-29 14:13:22.475 ERROR [http-nio-8081-exec-9] --> : Servlet.service() for servlet [dispatcherServlet] threw exception
+java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.apache.catalina.connector.Response.getOutputStream(Response.java:550)
+	at org.apache.catalina.connector.ResponseFacade.getOutputStream(ResponseFacade.java:210)
+	at javax.servlet.ServletResponseWrapper.getOutputStream(ServletResponseWrapper.java:105)
+	at org.springframework.http.server.ServletServerHttpResponse.getBody(ServletServerHttpResponse.java:97)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:420)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:277)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:124)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:710)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:578)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:514)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:392)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:257)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:352)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:177)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-03-29 14:13:22.477 ERROR [http-nio-8081-exec-9] --> : Exception Processing ErrorPage[errorCode=0, location=/error]
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:710)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:578)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:514)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:392)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:257)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:352)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:177)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.apache.catalina.connector.Response.getOutputStream(Response.java:550)
+	at org.apache.catalina.connector.ResponseFacade.getOutputStream(ResponseFacade.java:210)
+	at javax.servlet.ServletResponseWrapper.getOutputStream(ServletResponseWrapper.java:105)
+	at org.springframework.http.server.ServletServerHttpResponse.getBody(ServletServerHttpResponse.java:97)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:420)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:277)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:124)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	... 38 common frames omitted
+2021-03-29 14:13:33.611 INFO  [Thread-5] --> : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-29 14:13:33.873 INFO  [Thread-5] --> : {dataSource-1} closed
+2021-03-29 14:13:34.062 INFO  [restartedMain] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 20788 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 14:13:34.063 DEBUG [restartedMain] --> : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-29 14:13:34.063 INFO  [restartedMain] --> : No active profile set, falling back to default profiles: default
+2021-03-29 14:13:34.537 INFO  [restartedMain] --> : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-29 14:13:34.538 INFO  [restartedMain] --> : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-29 14:13:34.565 INFO  [restartedMain] --> : Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2021-03-29 14:13:34.697 INFO  [restartedMain] --> : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@28ec30d4' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 14:13:34.701 INFO  [restartedMain] --> : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 14:13:34.795 INFO  [restartedMain] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 14:13:34.797 INFO  [restartedMain] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 14:13:34.797 INFO  [restartedMain] --> : Starting service [Tomcat]
+2021-03-29 14:13:34.798 INFO  [restartedMain] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 14:13:34.841 INFO  [restartedMain] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 14:13:34.841 INFO  [restartedMain] --> : Root WebApplicationContext: initialization completed in 772 ms
+2021-03-29 14:13:34.959 INFO  [restartedMain] --> : Init DruidDataSource
+2021-03-29 14:13:35.222 INFO  [restartedMain] --> : {dataSource-2} inited
+2021-03-29 14:13:36.106 INFO  [restartedMain] --> : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@655fa5c7, org.springframework.security.web.context.SecurityContextPersistenceFilter@33499d71, org.springframework.security.web.header.HeaderWriterFilter@3243ca08, org.springframework.web.filter.CorsFilter@12f5d597, org.springframework.security.web.authentication.logout.LogoutFilter@56e4c02f, club.codeqi.project.Filter.JwtLoginFilter@38883d57, club.codeqi.project.Filter.JwtVerfyFilter@45e46eda, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@15914df3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39aec6c3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62aac7cf, org.springframework.security.web.session.SessionManagementFilter@869d805, org.springframework.security.web.access.ExceptionTranslationFilter@43fcb043, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@716ac061]
+2021-03-29 14:13:36.197 INFO  [restartedMain] --> : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-29 14:13:36.441 INFO  [restartedMain] --> : LiveReload server is running on port 35729
+2021-03-29 14:13:36.475 INFO  [restartedMain] --> : Starting ProtocolHandler ["http-nio-8081"]
+2021-03-29 14:13:36.480 INFO  [restartedMain] --> : Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-29 14:13:36.487 INFO  [restartedMain] --> : Started ProjectApplication in 2.515 seconds (JVM running for 161.057)
+2021-03-29 14:13:36.491 INFO  [restartedMain] --> : Condition evaluation unchanged
+2021-03-29 14:13:38.458 INFO  [Thread-8] --> : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-29 14:13:38.468 INFO  [Thread-8] --> : {dataSource-2} closed
+2021-03-29 14:13:38.624 INFO  [restartedMain] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 20788 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 14:13:38.624 DEBUG [restartedMain] --> : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-29 14:13:38.625 INFO  [restartedMain] --> : No active profile set, falling back to default profiles: default
+2021-03-29 14:13:39.162 INFO  [restartedMain] --> : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-29 14:13:39.162 INFO  [restartedMain] --> : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-29 14:13:39.183 INFO  [restartedMain] --> : Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2021-03-29 14:13:39.298 INFO  [restartedMain] --> : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@498e38f8' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 14:13:39.301 INFO  [restartedMain] --> : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 14:13:39.433 INFO  [restartedMain] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 14:13:39.435 INFO  [restartedMain] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 14:13:39.435 INFO  [restartedMain] --> : Starting service [Tomcat]
+2021-03-29 14:13:39.435 INFO  [restartedMain] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 14:13:39.489 INFO  [restartedMain] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 14:13:39.489 INFO  [restartedMain] --> : Root WebApplicationContext: initialization completed in 858 ms
+2021-03-29 14:13:39.615 INFO  [restartedMain] --> : Init DruidDataSource
+2021-03-29 14:13:39.896 INFO  [restartedMain] --> : {dataSource-3} inited
+2021-03-29 14:13:40.840 INFO  [restartedMain] --> : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b704470, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b141865, org.springframework.security.web.header.HeaderWriterFilter@6f78f5a2, org.springframework.web.filter.CorsFilter@6e43f4b7, org.springframework.security.web.authentication.logout.LogoutFilter@592b3196, club.codeqi.project.Filter.JwtLoginFilter@5c52f247, club.codeqi.project.Filter.JwtVerfyFilter@2af9e0fb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@46f9a2b0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e049a28, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@655cb9e8, org.springframework.security.web.session.SessionManagementFilter@781b6d6c, org.springframework.security.web.access.ExceptionTranslationFilter@2e786f18, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@205df6ea]
+2021-03-29 14:13:40.983 INFO  [restartedMain] --> : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-29 14:13:41.355 INFO  [restartedMain] --> : LiveReload server is running on port 35729
+2021-03-29 14:13:41.397 INFO  [restartedMain] --> : Starting ProtocolHandler ["http-nio-8081"]
+2021-03-29 14:13:41.403 INFO  [restartedMain] --> : Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-29 14:13:41.414 INFO  [http-nio-8081-exec-1] --> : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-29 14:13:41.415 INFO  [http-nio-8081-exec-1] --> : Initializing Servlet 'dispatcherServlet'
+2021-03-29 14:13:41.416 INFO  [restartedMain] --> : Started ProjectApplication in 2.862 seconds (JVM running for 165.985)
+2021-03-29 14:13:41.418 INFO  [http-nio-8081-exec-1] --> : Completed initialization in 2 ms
+2021-03-29 14:13:41.421 INFO  [restartedMain] --> : Condition evaluation unchanged
+2021-03-29 14:16:01.756 INFO  [restartedMain] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 8140 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 14:16:01.760 DEBUG [restartedMain] --> : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-29 14:16:01.760 INFO  [restartedMain] --> : No active profile set, falling back to default profiles: default
+2021-03-29 14:16:01.836 INFO  [restartedMain] --> : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-29 14:16:01.837 INFO  [restartedMain] --> : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-29 14:16:03.357 INFO  [restartedMain] --> : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-29 14:16:03.359 INFO  [restartedMain] --> : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-29 14:16:03.399 INFO  [restartedMain] --> : Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2021-03-29 14:16:04.054 INFO  [restartedMain] --> : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2231a31a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 14:16:04.066 INFO  [restartedMain] --> : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 14:16:04.720 INFO  [restartedMain] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 14:16:04.738 INFO  [restartedMain] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 14:16:04.740 INFO  [restartedMain] --> : Starting service [Tomcat]
+2021-03-29 14:16:04.740 INFO  [restartedMain] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 14:16:04.968 INFO  [restartedMain] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 14:16:04.968 INFO  [restartedMain] --> : Root WebApplicationContext: initialization completed in 3130 ms
+2021-03-29 14:16:05.227 INFO  [restartedMain] --> : Init DruidDataSource
+2021-03-29 14:16:05.551 INFO  [restartedMain] --> : {dataSource-1} inited
+2021-03-29 14:16:07.754 INFO  [restartedMain] --> : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@675d8fdb, org.springframework.security.web.context.SecurityContextPersistenceFilter@569958a9, org.springframework.security.web.header.HeaderWriterFilter@370aa9e3, org.springframework.web.filter.CorsFilter@23594c55, org.springframework.security.web.authentication.logout.LogoutFilter@2fa43912, club.codeqi.project.Filter.JwtLoginFilter@75032ced, club.codeqi.project.Filter.JwtVerfyFilter@112ff318, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14fe1877, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71e8c01e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a5d8cd9, org.springframework.security.web.session.SessionManagementFilter@6eea794e, org.springframework.security.web.access.ExceptionTranslationFilter@2e33d845, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4773bf0d]
+2021-03-29 14:16:08.033 INFO  [restartedMain] --> : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-29 14:16:08.927 INFO  [restartedMain] --> : LiveReload server is running on port 35729
+2021-03-29 14:16:09.017 INFO  [restartedMain] --> : Starting ProtocolHandler ["http-nio-8081"]
+2021-03-29 14:16:09.060 INFO  [restartedMain] --> : Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-29 14:16:09.085 INFO  [restartedMain] --> : Started ProjectApplication in 8.208 seconds (JVM running for 10.775)
+2021-03-29 14:16:15.244 INFO  [http-nio-8081-exec-1] --> : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-29 14:16:15.244 INFO  [http-nio-8081-exec-1] --> : Initializing Servlet 'dispatcherServlet'
+2021-03-29 14:16:15.247 INFO  [http-nio-8081-exec-1] --> : Completed initialization in 1 ms
+2021-03-29 14:16:43.458 DEBUG [http-nio-8081-exec-3] --> : ==>  Preparing: SELECT u.id uid,u.username,u.password,u.phone,u.role_id, r.id rid, r.role_name, r.role_info, p.id perid, p.permission_code, p.permission_info FROM USER u LEFT JOIN role r ON u.role_id = r.id LEFT JOIN permission p ON u.role_id = p.rid WHERE username = ? 
+2021-03-29 14:16:43.522 DEBUG [http-nio-8081-exec-3] --> : ==> Parameters: admin(String)
+2021-03-29 14:16:43.569 DEBUG [http-nio-8081-exec-3] --> : <==      Total: 3
+2021-03-29 14:24:37.572 INFO  [Thread-5] --> : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-29 14:24:37.829 INFO  [Thread-5] --> : {dataSource-1} closed
+2021-03-29 14:24:38.004 INFO  [restartedMain] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 8140 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 14:24:38.004 DEBUG [restartedMain] --> : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-29 14:24:38.005 INFO  [restartedMain] --> : No active profile set, falling back to default profiles: default
+2021-03-29 14:24:38.405 INFO  [restartedMain] --> : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-29 14:24:38.406 INFO  [restartedMain] --> : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-29 14:24:38.408 INFO  [restartedMain] --> : Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2021-03-29 14:24:38.493 WARN  [restartedMain] --> : No MyBatis mapper was found in '[club.codeqi.project.Mapper]' package. Please check your configuration.
+2021-03-29 14:24:38.608 INFO  [restartedMain] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 14:24:38.610 INFO  [restartedMain] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 14:24:38.611 INFO  [restartedMain] --> : Starting service [Tomcat]
+2021-03-29 14:24:38.611 INFO  [restartedMain] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 14:24:38.661 INFO  [restartedMain] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 14:24:38.662 INFO  [restartedMain] --> : Root WebApplicationContext: initialization completed in 653 ms
+2021-03-29 14:24:38.803 INFO  [restartedMain] --> : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-29 14:24:38.973 INFO  [restartedMain] --> : Init DruidDataSource
+2021-03-29 14:24:39.000 INFO  [restartedMain] --> : {dataSource-2} inited
+2021-03-29 14:24:39.062 WARN  [restartedMain] --> : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\亚龙展旗\项目2021\项目管理\project\target\classes\mapper\PermissionMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\亚龙展旗\项目2021\项目管理\project\target\classes\mapper\PermissionMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'club.codeqi.project.pojo.Permission'.  Cause: java.lang.ClassNotFoundException: Cannot find class: club.codeqi.project.pojo.Permission
+2021-03-29 14:24:39.063 INFO  [restartedMain] --> : {dataSource-2} closed
+2021-03-29 14:24:39.064 INFO  [restartedMain] --> : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-29 14:24:39.065 INFO  [restartedMain] --> : Stopping service [Tomcat]
+2021-03-29 14:24:39.077 INFO  [restartedMain] --> : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-03-29 14:24:39.126 ERROR [restartedMain] --> : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\亚龙展旗\项目2021\项目管理\project\target\classes\mapper\PermissionMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\亚龙展旗\项目2021\项目管理\project\target\classes\mapper\PermissionMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'club.codeqi.project.pojo.Permission'.  Cause: java.lang.ClassNotFoundException: Cannot find class: club.codeqi.project.pojo.Permission
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:582)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at club.codeqi.project.ProjectApplication.main(ProjectApplication.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\亚龙展旗\项目2021\项目管理\project\target\classes\mapper\PermissionMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\亚龙展旗\项目2021\项目管理\project\target\classes\mapper\PermissionMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'club.codeqi.project.pojo.Permission'.  Cause: java.lang.ClassNotFoundException: Cannot find class: club.codeqi.project.pojo.Permission
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 25 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\亚龙展旗\项目2021\项目管理\project\target\classes\mapper\PermissionMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\亚龙展旗\项目2021\项目管理\project\target\classes\mapper\PermissionMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'club.codeqi.project.pojo.Permission'.  Cause: java.lang.ClassNotFoundException: Cannot find class: club.codeqi.project.pojo.Permission
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:595)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:431)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:628)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration.sqlSessionFactory(MybatisPlusAutoConfiguration.java:218)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$9a1e3764.CGLIB$sqlSessionFactory$2(<generated>)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$9a1e3764$$FastClassBySpringCGLIB$$defe3d02.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$9a1e3764.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 26 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\亚龙展旗\项目2021\项目管理\project\target\classes\mapper\PermissionMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'club.codeqi.project.pojo.Permission'.  Cause: java.lang.ClassNotFoundException: Cannot find class: club.codeqi.project.pojo.Permission
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:593)
+	... 39 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'club.codeqi.project.pojo.Permission'.  Cause: java.lang.ClassNotFoundException: Cannot find class: club.codeqi.project.pojo.Permission
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:262)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:253)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:245)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118)
+	... 41 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'club.codeqi.project.pojo.Permission'.  Cause: java.lang.ClassNotFoundException: Cannot find class: club.codeqi.project.pojo.Permission
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 45 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: club.codeqi.project.pojo.Permission
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 47 common frames omitted
+2021-03-29 14:24:43.998 INFO  [restartedMain] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 8140 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 14:24:43.998 DEBUG [restartedMain] --> : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-29 14:24:43.999 INFO  [restartedMain] --> : No active profile set, falling back to default profiles: default
+2021-03-29 14:24:44.478 INFO  [restartedMain] --> : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-29 14:24:44.479 INFO  [restartedMain] --> : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-29 14:24:44.499 INFO  [restartedMain] --> : Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2021-03-29 14:24:44.604 INFO  [restartedMain] --> : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@13fcce1' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 14:24:44.607 INFO  [restartedMain] --> : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 14:24:44.719 INFO  [restartedMain] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 14:24:44.722 INFO  [restartedMain] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 14:24:44.723 INFO  [restartedMain] --> : Starting service [Tomcat]
+2021-03-29 14:24:44.724 INFO  [restartedMain] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 14:24:44.760 INFO  [restartedMain] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 14:24:44.761 INFO  [restartedMain] --> : Root WebApplicationContext: initialization completed in 755 ms
+2021-03-29 14:24:44.872 INFO  [restartedMain] --> : Init DruidDataSource
+2021-03-29 14:24:45.035 INFO  [restartedMain] --> : {dataSource-3} inited
+2021-03-29 14:24:45.628 WARN  [restartedMain] --> : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'controllerAspect': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [club.codeqi.project.Aop.ControllerAspect] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@14167927]
+2021-03-29 14:24:45.629 INFO  [restartedMain] --> : {dataSource-3} closed
+2021-03-29 14:24:45.630 INFO  [restartedMain] --> : Stopping service [Tomcat]
+2021-03-29 14:24:45.642 INFO  [restartedMain] --> : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-03-29 14:24:45.647 ERROR [restartedMain] --> : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'controllerAspect': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [club.codeqi.project.Aop.ControllerAspect] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@14167927]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1201)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:582)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at club.codeqi.project.ProjectApplication.main(ProjectApplication.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [club.codeqi.project.Aop.ControllerAspect] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@14167927]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/JoinPoint
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.JoinPoint
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 30 common frames omitted
+2021-03-29 14:25:48.639 INFO  [restartedMain] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 7892 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-03-29 14:25:48.644 DEBUG [restartedMain] --> : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-29 14:25:48.645 INFO  [restartedMain] --> : No active profile set, falling back to default profiles: default
+2021-03-29 14:25:48.763 INFO  [restartedMain] --> : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-29 14:25:48.764 INFO  [restartedMain] --> : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-29 14:25:50.469 INFO  [restartedMain] --> : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-29 14:25:50.475 INFO  [restartedMain] --> : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-29 14:25:50.542 INFO  [restartedMain] --> : Finished Spring Data repository scanning in 41 ms. Found 0 Redis repository interfaces.
+2021-03-29 14:25:51.632 INFO  [restartedMain] --> : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@55a31fd0' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 14:25:51.654 INFO  [restartedMain] --> : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 14:25:52.417 INFO  [restartedMain] --> : Tomcat initialized with port(s): 8081 (http)
+2021-03-29 14:25:52.437 INFO  [restartedMain] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-29 14:25:52.438 INFO  [restartedMain] --> : Starting service [Tomcat]
+2021-03-29 14:25:52.439 INFO  [restartedMain] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-29 14:25:52.685 INFO  [restartedMain] --> : Initializing Spring embedded WebApplicationContext
+2021-03-29 14:25:52.686 INFO  [restartedMain] --> : Root WebApplicationContext: initialization completed in 3921 ms
+2021-03-29 14:25:53.151 INFO  [restartedMain] --> : Init DruidDataSource
+2021-03-29 14:25:53.953 INFO  [restartedMain] --> : {dataSource-1} inited
+2021-03-29 14:25:56.777 INFO  [restartedMain] --> : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11605e2b, org.springframework.security.web.context.SecurityContextPersistenceFilter@6abf617e, org.springframework.security.web.header.HeaderWriterFilter@27f32b61, org.springframework.web.filter.CorsFilter@4a41e0d8, org.springframework.security.web.authentication.logout.LogoutFilter@a3b9eca, club.codeqi.project.Filter.JwtLoginFilter@7ef3f9f6, club.codeqi.project.Filter.JwtVerfyFilter@6fec53f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bfaea94, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57be62e9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30226ed6, org.springframework.security.web.session.SessionManagementFilter@74e122d6, org.springframework.security.web.access.ExceptionTranslationFilter@75fa282f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@34e9e690]
+2021-03-29 14:25:57.300 INFO  [restartedMain] --> : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-29 14:25:58.847 INFO  [restartedMain] --> : LiveReload server is running on port 35729
+2021-03-29 14:25:58.941 INFO  [restartedMain] --> : Starting ProtocolHandler ["http-nio-8081"]
+2021-03-29 14:25:58.981 INFO  [restartedMain] --> : Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-29 14:25:59.005 INFO  [restartedMain] --> : Started ProjectApplication in 11.523 seconds (JVM running for 13.531)
+2021-03-29 14:26:10.583 INFO  [http-nio-8081-exec-2] --> : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-29 14:26:10.584 INFO  [http-nio-8081-exec-2] --> : Initializing Servlet 'dispatcherServlet'
+2021-03-29 14:26:10.587 INFO  [http-nio-8081-exec-2] --> : Completed initialization in 2 ms
+2021-03-29 14:26:10.896 INFO  [http-nio-8081-exec-2] --> : --------------------请求开始--------------------
+2021-03-29 14:26:10.911 INFO  [http-nio-8081-exec-2] --> : 请求路径: http://localhost:8081/task/tasks  GET
+请求内容:{}
+2021-03-29 14:26:12.725 INFO  [http-nio-8081-exec-2] --> : 请求结果：Result(code=200, data=[TaskVO(id=1, value=1, label=上海, user=, startTime=1615996800000, endTime=1630252800000, percent=10, type=project, parentId=null, collapsed=false, style={base={fill=#1BA0EA, stroke=#1B8ED5}}, children=null), TaskVO(id=2, value=2, label=系统研究滤棒成型工艺对卷烟吸阻稳定性的控制方法项目, user=巫胜, startTime=1615996800000, endTime=1626278400000, percent=20, type=project, parentId=1, collapsed=true, style={base={fill=#149CE7, stroke=#1397E8}}, children=null), TaskVO(id=3, value=3, label=项目启动, user=巫胜, startTime=1615996800000, endTime=1616256000000, percent=100, type=task, parentId=2, collapsed=false, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=5, value=5, label=项目调研, user=巫胜, startTime=1616256000000, endTime=1617638400000, percent=10, type=task, parentId=2, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=6, value=6, label=项目实施, user=巫胜, startTime=1617638400000, endTime=1620662400000, percent=0, type=task, parentId=2, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=7, value=7, label=项目改进, user=巫胜, startTime=1620662400000, endTime=1623686400000, percent=0, type=task, parentId=2, collapsed=false, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=8, value=8, label=柳州, user=, startTime=1605110400000, endTime=1624982400000, percent=40, type=project, parentId=null, collapsed=false, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=9, value=9, label=降低HDT气流式烘丝风选出口水分标偏（南京红、南京佳品、红南京紫晶）, user=汪洋雷冰, startTime=1605110400000, endTime=1622304000000, percent=50, type=project, parentId=8, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=14, value=14, label=项目验证, user=巫胜, startTime=1623686400000, endTime=1626278400000, percent=0, type=task, parentId=2, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=15, value=15, label=基于制丝加工强度的质量稳定控制模式的探索项目, user=汪洋雷冰, startTime=1615996800000, endTime=1630252800000, percent=5, type=project, parentId=1, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=16, value=16, label=项目启动, user=汪洋雷冰, startTime=1615996800000, endTime=1616256000000, percent=100, type=task, parentId=15, collapsed=false, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=17, value=17, label=项目调研, user=汪洋雷冰, startTime=1616256000000, endTime=1618502400000, percent=10, type=task, parentId=15, collapsed=false, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=18, value=18, label=项目实施, user=汪洋雷冰, startTime=1615305600000, endTime=1617120000000, percent=0, type=task, parentId=15, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=19, value=19, label=项目改进, user=汪洋雷冰, startTime=1622390400000, endTime=1626278400000, percent=0, type=task, parentId=15, collapsed=false, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=20, value=20, label=项目验证, user=汪洋雷冰, startTime=1626278400000, endTime=1628870400000, percent=0, type=task, parentId=15, collapsed=false, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=21, value=21, label=恩施, user=, startTime=1605110400000, endTime=1630252800000, percent=50, type=project, parentId=null, collapsed=false, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=22, value=22, label=长沙, user=, startTime=1601481600000, endTime=1632931200000, percent=0, type=project, parentId=null, collapsed=false, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=23, value=23, label=襄阳, user=, startTime=1601568000000, endTime=1638201600000, percent=0, type=project, parentId=null, collapsed=false, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=24, value=24, label=项目启动, user=汪洋雷冰, startTime=1605110400000, endTime=1607702400000, percent=100, type=task, parentId=9, collapsed=false, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=25, value=25, label=项目调研, user=汪洋雷冰, startTime=1607702400000, endTime=1613318400000, percent=100, type=task, parentId=9, collapsed=false, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=26, value=26, label=项目实施, user=汪洋雷冰, startTime=1613318400000, endTime=1623686400000, percent=30, type=task, parentId=9, collapsed=false, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=27, value=27, label=项目改进, user=汪洋雷冰, startTime=1623686400000, endTime=1628870400000, percent=0, type=task, parentId=9, collapsed=false, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=28, value=28, label=项目验证, user=汪洋雷冰, startTime=1628870400000, endTime=1632326400000, percent=0, type=task, parentId=9, collapsed=false, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=29, value=29, label=实施1, user=巫胜, startTime=1616428800000, endTime=1616601600000, percent=0, type=milestone, parentId=6, collapsed=true, style={base={fill=#22CD47, stroke=#081A25}}, children=null), TaskVO(id=30, value=30, label=1#线松散回潮出口水分稳定性研究, user=高小龙, startTime=1605110400000, endTime=1630252800000, percent=0, type=project, parentId=21, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=31, value=31, label=项目启动, user=高小龙, startTime=1605110400000, endTime=1607702400000, percent=0, type=task, parentId=30, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=32, value=32, label=项目调研, user=高小龙, startTime=1607702400000, endTime=1610380800000, percent=0, type=task, parentId=30, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=33, value=33, label=项目实施, user=高小龙, startTime=1610380800000, endTime=1613059200000, percent=0, type=task, parentId=30, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=34, value=34, label=项目改进, user=高小龙, startTime=1613059200000, endTime=1615478400000, percent=0, type=task, parentId=30, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=35, value=35, label=项目验证, user=高小龙, startTime=1615478400000, endTime=1618156800000, percent=0, type=task, parentId=30, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=36, value=36, label=1#线薄板式烘丝机控制模式研究, user=汪洋雷冰, startTime=1601568000000, endTime=1630252800000, percent=0, type=project, parentId=21, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=37, value=37, label=项目启动, user=汪洋雷冰, startTime=1601568000000, endTime=1604246400000, percent=0, type=task, parentId=36, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=38, value=38, label=项目调研, user=汪洋雷冰, startTime=1604246400000, endTime=1606838400000, percent=0, type=task, parentId=36, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=39, value=39, label=项目实施, user=汪洋雷冰, startTime=1606838400000, endTime=1609516800000, percent=0, type=task, parentId=36, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=40, value=40, label=项目改进, user=汪洋雷冰, startTime=1609516800000, endTime=1612195200000, percent=0, type=task, parentId=36, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=41, value=41, label=项目验证, user=汪洋雷冰, startTime=1612195200000, endTime=1614614400000, percent=0, type=task, parentId=36, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=43, value=43, label=降低PROTOST70（软红）牌号烟支重量标偏, user=巫胜, startTime=1605110400000, endTime=1630252800000, percent=0, type=project, parentId=21, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=44, value=44, label=项目启动, user=巫胜, startTime=1605110400000, endTime=1607702400000, percent=0, type=task, parentId=43, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=45, value=45, label=项目调研, user=巫胜, startTime=1607702400000, endTime=1610380800000, percent=0, type=task, parentId=43, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=46, value=46, label=项目实施, user=巫胜, startTime=1610380800000, endTime=1613059200000, percent=0, type=task, parentId=43, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=47, value=47, label=项目改进, user=巫胜, startTime=1613059200000, endTime=1615478400000, percent=0, type=task, parentId=43, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=48, value=48, label=项目验证, user=巫胜, startTime=1615478400000, endTime=1618156800000, percent=0, type=task, parentId=43, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=49, value=49, label=包装商标纸材料上机适应性研究（真龙鸿韵、真龙祥云）, user=巫胜, startTime=1605110400000, endTime=1624982400000, percent=0, type=project, parentId=8, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=50, value=50, label=项目启动, user=巫胜, startTime=1605110400000, endTime=1607702400000, percent=0, type=task, parentId=49, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=51, value=51, label=项目调研, user=巫胜, startTime=1607702400000, endTime=1610380800000, percent=0, type=task, parentId=49, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=52, value=52, label=项目实施, user=巫胜, startTime=1610380800000, endTime=1613059200000, percent=0, type=task, parentId=49, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=53, value=53, label=项目改进, user=巫胜, startTime=1613059200000, endTime=1615478400000, percent=0, type=task, parentId=49, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=54, value=54, label=项目验证, user=巫胜, startTime=1615478400000, endTime=1618156800000, percent=0, type=task, parentId=49, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=55, value=55, label=降低烟支重量（南京红、南京紫晶）SD值, user=成伟, startTime=1605110400000, endTime=1624982400000, percent=0, type=project, parentId=8, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=56, value=56, label=项目启动, user=成伟, startTime=1605110400000, endTime=1607702400000, percent=0, type=task, parentId=55, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=57, value=57, label=项目调研, user=成伟, startTime=1607702400000, endTime=1610380800000, percent=0, type=task, parentId=55, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=58, value=58, label=项目实施, user=成伟, startTime=1610380800000, endTime=1613059200000, percent=0, type=task, parentId=55, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=59, value=59, label=项目改进, user=成伟, startTime=1613059200000, endTime=1615478400000, percent=0, type=task, parentId=55, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=60, value=60, label=项目验证, user=成伟, startTime=1615478400000, endTime=1618156800000, percent=0, type=task, parentId=55, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=61, value=61, label=制丝工房烘前水分稳定性模型研究, user=高小龙, startTime=1601568000000, endTime=1632931200000, percent=0, type=project, parentId=22, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=62, value=62, label=项目启动, user=高小龙, startTime=1601568000000, endTime=1604246400000, percent=0, type=task, parentId=61, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=63, value=63, label=项目调研, user=高小龙, startTime=1604246400000, endTime=1606838400000, percent=0, type=task, parentId=61, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=64, value=64, label=项目实施, user=高小龙, startTime=1606838400000, endTime=1609516800000, percent=0, type=task, parentId=61, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=65, value=65, label=项目改进, user=高小龙, startTime=1609516800000, endTime=1612195200000, percent=0, type=task, parentId=61, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=66, value=66, label=项目验证, user=高小龙, startTime=1612195200000, endTime=1614614400000, percent=0, type=task, parentId=61, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=67, value=67, label=降低细支爆珠漏液率项目, user=成伟, startTime=1601568000000, endTime=1632931200000, percent=0, type=project, parentId=22, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=68, value=68, label=项目启动, user=成伟, startTime=1601568000000, endTime=1604246400000, percent=0, type=task, parentId=67, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=69, value=69, label=项目调研, user=成伟, startTime=1604246400000, endTime=1606838400000, percent=0, type=task, parentId=67, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=70, value=70, label=项目实施, user=成伟, startTime=1606838400000, endTime=1609516800000, percent=0, type=task, parentId=67, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=71, value=71, label=项目改进, user=成伟, startTime=1609516800000, endTime=1612195200000, percent=0, type=task, parentId=67, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=72, value=72, label=项目验证, user=成伟, startTime=1612195200000, endTime=1614614400000, percent=0, type=task, parentId=67, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=73, value=73, label=降低非细支类品牌烟支单重克重偏差, user=成伟, startTime=1601222400000, endTime=1632931200000, percent=0, type=project, parentId=22, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=74, value=74, label=项目启动, user=成伟, startTime=1601222400000, endTime=1603814400000, percent=0, type=task, parentId=73, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=75, value=75, label=项目调研, user=成伟, startTime=1603814400000, endTime=1606492800000, percent=0, type=task, parentId=73, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=76, value=76, label=项目实施, user=成伟, startTime=1606492800000, endTime=1609084800000, percent=0, type=task, parentId=73, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=77, value=77, label=项目改进, user=成伟, startTime=1609084800000, endTime=1611763200000, percent=0, type=task, parentId=73, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=78, value=78, label=项目验证, user=成伟, startTime=1611763200000, endTime=1614441600000, percent=0, type=task, parentId=73, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=79, value=79, label=烘前水分稳定性研究, user=汪洋雷冰, startTime=1601568000000, endTime=1638201600000, percent=0, type=project, parentId=23, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=80, value=80, label=项目启动, user=汪洋雷冰, startTime=1601568000000, endTime=1604246400000, percent=0, type=task, parentId=79, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=81, value=81, label=项目调研, user=汪洋雷冰, startTime=1604246400000, endTime=1606838400000, percent=0, type=task, parentId=79, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=82, value=82, label=项目实施, user=汪洋雷冰, startTime=1606838400000, endTime=1609516800000, percent=0, type=task, parentId=79, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=83, value=83, label=项目改进, user=汪洋雷冰, startTime=1609516800000, endTime=1612195200000, percent=0, type=task, parentId=79, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=84, value=84, label=项目验证, user=汪洋雷冰, startTime=1612195200000, endTime=1614614400000, percent=0, type=task, parentId=79, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=85, value=85, label=降低嘴棒吸阻标偏, user=成伟, startTime=1601568000000, endTime=1638201600000, percent=0, type=project, parentId=23, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=86, value=86, label=项目启动, user=成伟, startTime=1601568000000, endTime=1604246400000, percent=0, type=task, parentId=85, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=87, value=87, label=项目调研, user=成伟, startTime=1604246400000, endTime=1606838400000, percent=0, type=task, parentId=85, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=88, value=88, label=项目实施, user=成伟, startTime=1606838400000, endTime=1609516800000, percent=0, type=task, parentId=85, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=89, value=89, label=项目改进, user=成伟, startTime=1609516800000, endTime=1612195200000, percent=0, type=task, parentId=85, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=90, value=90, label=项目验证, user=成伟, startTime=1612195200000, endTime=1614614400000, percent=0, type=task, parentId=85, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=91, value=91, label=降低3#高速机组重量标偏, user=成伟, startTime=1601222400000, endTime=1638201600000, percent=0, type=project, parentId=23, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=92, value=92, label=项目启动, user=成伟, startTime=1601222400000, endTime=1603814400000, percent=0, type=task, parentId=91, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=93, value=93, label=项目调研, user=成伟, startTime=1603814400000, endTime=1606492800000, percent=0, type=task, parentId=91, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=94, value=94, label=项目实施, user=成伟, startTime=1606492800000, endTime=1609084800000, percent=0, type=task, parentId=91, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=95, value=95, label=项目改进, user=成伟, startTime=1609084800000, endTime=1611763200000, percent=0, type=task, parentId=91, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=96, value=96, label=项目验证, user=成伟, startTime=1611763200000, endTime=1614441600000, percent=0, type=task, parentId=91, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=97, value=97, label=细支卷烟卷接过程吸阻影响因素研究, user=周超, startTime=1601568000000, endTime=1638201600000, percent=0, type=project, parentId=23, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=98, value=98, label=项目启动, user=周超, startTime=1601568000000, endTime=1604246400000, percent=0, type=task, parentId=97, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=99, value=99, label=项目调研, user=周超, startTime=1604246400000, endTime=1606838400000, percent=0, type=task, parentId=97, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=100, value=100, label=项目实施, user=周超, startTime=1606838400000, endTime=1609516800000, percent=0, type=task, parentId=97, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=101, value=101, label=项目改进, user=周超, startTime=1609516800000, endTime=1612195200000, percent=0, type=task, parentId=97, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null), TaskVO(id=102, value=102, label=项目验证, user=周超, startTime=1612195200000, endTime=1614614400000, percent=0, type=task, parentId=97, collapsed=true, style={base={fill=#0287D0, stroke=#0077C0}}, children=null)])
+2021-03-29 14:26:12.733 INFO  [http-nio-8081-exec-2] --> : --------------------请求结束--------------------
+2021-03-29 15:39:34.926 DEBUG [http-nio-8081-exec-10] --> : ==>  Preparing: SELECT u.id uid,u.username,u.password,u.phone,u.role_id, r.id rid, r.role_name, r.role_info, p.id perid, p.permission_code, p.permission_info FROM USER u LEFT JOIN role r ON u.role_id = r.id LEFT JOIN permission p ON u.role_id = p.rid WHERE username = ? 
+2021-03-29 15:39:35.004 DEBUG [http-nio-8081-exec-10] --> : ==> Parameters: admin(String)
+2021-03-29 15:39:35.073 DEBUG [http-nio-8081-exec-10] --> : <==      Total: 3
+2021-03-29 15:40:43.515 DEBUG [http-nio-8081-exec-9] --> : ==>  Preparing: SELECT u.id uid,u.username,u.password,u.phone,u.role_id, r.id rid, r.role_name, r.role_info, p.id perid, p.permission_code, p.permission_info FROM USER u LEFT JOIN role r ON u.role_id = r.id LEFT JOIN permission p ON u.role_id = p.rid WHERE username = ? 
+2021-03-29 15:40:43.516 DEBUG [http-nio-8081-exec-9] --> : ==> Parameters: admin(String)
+2021-03-29 15:40:43.524 DEBUG [http-nio-8081-exec-9] --> : <==      Total: 3
