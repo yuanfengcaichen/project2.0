@@ -63,4 +63,10 @@
         where id = #{id}
     </select>
 
+	<!-- 查出差任务 -->
+	<select id="getTravel" resultType="club.codeqi.project.pojo.Task">
+		<include refid="select_sql"></include>
+		where type = "milestone" and user = #{username} and startTime &lt;= #{time} and endTime &gt;= #{time}
+	</select>
+
 </mapper>

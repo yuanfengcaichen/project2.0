@@ -3,6 +3,7 @@ package club.codeqi.project.Controller;
 import club.codeqi.project.Service.TaskService;
 import club.codeqi.project.Service.UserHelper;
 import club.codeqi.project.VO.TaskVO;
+import club.codeqi.project.VO.UserTravelVO;
 import club.codeqi.project.pojo.Task;
 import club.codeqi.project.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -31,7 +33,7 @@ public class TaskController {
 
     //@PreAuthorize("hasAuthority('selectAll')")
     @GetMapping("/tasks")
-    public Result getAll(HttpServletRequest request){
+    public Result getAll(HttpServletRequest request,@RequestParam(required = false) Long time){
         User userInfo = UserHelper.getUserInfo(request);
         ArrayList<TaskVO> alltasks = taskService.getAlltasks(userInfo);
         Result result = new Result();
@@ -69,6 +71,20 @@ public class TaskController {
         Result result = new Result();
         result.setCode("200");
         result.setData(taskVOS);
+        return result;
+    }
+
+    /**
+     * 根据传入的时间获取当前日期全部用户的出差信息
+     * @param time
+     * @return
+     */
+    @GetMapping("/travel")
+    public Result getTravel(@RequestParam(required = false) Long time){
+        ArrayList<UserTravelVO> userTravelVOS = taskService.getTravel(time);
+        Result result = new Result();
+        result.setCode("200");
+        result.setData(userTravelVOS);
         return result;
     }
 

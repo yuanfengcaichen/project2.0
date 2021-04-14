@@ -1,0 +1,26 @@
+2021-04-12 11:23:35.257 INFO  [restartedMain] --> : Starting ProjectApplication using Java 11.0.6 on DESKTOP-0NNS7PI with PID 2548 (D:\亚龙展旗\项目2021\项目管理\project\target\classes started by qiyuan in D:\亚龙展旗\项目2021\项目管理\project)
+2021-04-12 11:23:35.264 DEBUG [restartedMain] --> : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-04-12 11:23:35.266 INFO  [restartedMain] --> : No active profile set, falling back to default profiles: default
+2021-04-12 11:23:35.396 INFO  [restartedMain] --> : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-12 11:23:35.397 INFO  [restartedMain] --> : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-12 11:23:38.221 INFO  [restartedMain] --> : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-12 11:23:38.230 INFO  [restartedMain] --> : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-12 11:23:38.314 INFO  [restartedMain] --> : Finished Spring Data repository scanning in 48 ms. Found 0 Redis repository interfaces.
+2021-04-12 11:23:39.520 INFO  [restartedMain] --> : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3a4aaaf8' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-12 11:23:39.555 INFO  [restartedMain] --> : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-12 11:23:40.575 INFO  [restartedMain] --> : Tomcat initialized with port(s): 8081 (http)
+2021-04-12 11:23:40.601 INFO  [restartedMain] --> : Initializing ProtocolHandler ["http-nio-8081"]
+2021-04-12 11:23:40.603 INFO  [restartedMain] --> : Starting service [Tomcat]
+2021-04-12 11:23:40.604 INFO  [restartedMain] --> : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-12 11:23:40.860 INFO  [restartedMain] --> : Initializing Spring embedded WebApplicationContext
+2021-04-12 11:23:40.861 INFO  [restartedMain] --> : Root WebApplicationContext: initialization completed in 5463 ms
+2021-04-12 11:23:41.400 INFO  [restartedMain] --> : Init DruidDataSource
+2021-04-12 11:23:42.440 INFO  [restartedMain] --> : {dataSource-1} inited
+2021-04-12 11:23:46.201 INFO  [restartedMain] --> : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a1af0d6, org.springframework.security.web.context.SecurityContextPersistenceFilter@19ea7fd6, org.springframework.security.web.header.HeaderWriterFilter@4d592a8f, org.springframework.web.filter.CorsFilter@5cc8d296, org.springframework.security.web.authentication.logout.LogoutFilter@29217b17, club.codeqi.project.Filter.JwtLoginFilter@5a95ec7a, club.codeqi.project.Filter.JwtVerfyFilter@75d55a9a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d00616, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7fd6cca7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@303d7745, org.springframework.security.web.session.SessionManagementFilter@23bd755c, org.springframework.security.web.access.ExceptionTranslationFilter@fed8794, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@799e8777]
+2021-04-12 11:23:46.794 INFO  [restartedMain] --> : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-12 11:23:48.707 INFO  [restartedMain] --> : LiveReload server is running on port 35729
+2021-04-12 11:23:48.812 INFO  [restartedMain] --> : Starting ProtocolHandler ["http-nio-8081"]
+2021-04-12 11:23:48.862 INFO  [restartedMain] --> : Tomcat started on port(s): 8081 (http) with context path ''
+2021-04-12 11:23:48.902 INFO  [restartedMain] --> : Started ProjectApplication in 15.446 seconds (JVM running for 18.659)
+2021-04-12 11:24:59.647 INFO  [SpringContextShutdownHook] --> : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-12 11:24:59.715 INFO  [SpringContextShutdownHook] --> : {dataSource-1} closed

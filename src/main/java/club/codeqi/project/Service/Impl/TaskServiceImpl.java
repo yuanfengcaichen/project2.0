@@ -1,9 +1,11 @@
 package club.codeqi.project.Service.Impl;
 
 import club.codeqi.project.Mapper.TaskMapper;
+import club.codeqi.project.Mapper.UserMapper;
 import club.codeqi.project.Service.TaskService;
 import club.codeqi.project.Service.UserHelper;
 import club.codeqi.project.VO.TaskVO;
+import club.codeqi.project.VO.UserTravelVO;
 import club.codeqi.project.pojo.Task;
 import club.codeqi.project.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +26,9 @@ import java.util.*;
 public class TaskServiceImpl implements TaskService {
     @Autowired
     TaskMapper taskMapper;
+
+    @Autowired
+    UserMapper userMapper;
     @Override
     public ArrayList<TaskVO> getAlltasks(User userinfo) {
         boolean b = UserHelper.checkPre("selectAll", userinfo);
@@ -119,6 +124,36 @@ public class TaskServiceImpl implements TaskService {
             //tasks.addAll(tasks1);
         }
         return tasks;
+    }
+
+
+    @Override
+    public ArrayList<UserTravelVO> getTravel(long time) {
+        ArrayList<User> users = userMapper.selectAll();
+        ArrayList<UserTravelVO> userTravelVOS = new ArrayList<>();
+        for(User user:users){
+            UserTravelVO userTravelVO = new UserTravelVO();
+            userTravelVO.setUser(user);
+            ArrayList<Task> arrayList=taskMapper.getTravel(user.getUsername(),new Date(time));
+            ArrayList<String> locations = new ArrayList<>();
+            if(arrayList.size()!=0){
+                Task parentTask = taskMapper.selectByid(arrayList.get(0).getParentId());
+                locations.add(parentTask.getLabel());
+                parentTask = taskMapper.selectByid(parentTask.getParentId());
+                locations.add(parentTask.getLabel());
+                parentTask = taskMapper.selectByid(parentTask.getParentId());
+                locations.add(parentTask.getLabel());
+                userTravelVO.setLocation(locations.get(locations.size()-1));
+//                for(int i=0;i<locations.size();i++){
+//                    userTravelVO.setLocation(userTravelVO.getLocation()+locations.get(locations.size()-1-i)+"<br/>");
+//                }
+            }
+            else {
+                userTravelVO.setLocation("暂无出差任务");
+            }
+            userTravelVOS.add(userTravelVO);
+        }
+        return userTravelVOS;
     }
 
     public TaskVO trantTask(Task task){

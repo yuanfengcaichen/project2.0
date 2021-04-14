@@ -8,6 +8,7 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * @Author: codeqi
@@ -29,6 +30,9 @@ public interface TaskMapper {
     public ArrayList<Task> selectBypid(Integer pid);
     @Cacheable(key ="#p0")
     public Task selectByid(Integer id);
+
+    public ArrayList<Task> getTravel(String username, Date time);
+
     @CacheEvict(key ="#p0",allEntries=true)
     public int delete(int id);
 }
